@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avoraterra | European Architectural Excellence</title>
+    <title>Avoratara | European Architectural Excellence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
@@ -33,17 +33,20 @@
             position: fixed;
             bottom: 1.5rem;
             right: 1.5rem;
-            z-index: 9999; /* Ensure it stays above everything */
+            z-index: 9999;
             transition: transform 0.3s ease;
         }
         .floating-appointment:hover {
             transform: translateY(-5px);
         }
+        .about-gradient {
+            background: linear-gradient(to right, #f8fafc, #ffffff);
+        }
     </style>
 </head>
 <body class="bg-white text-slate-900">
 
-    <!-- Floating Appointment Button (Visible on all pages/scroll) -->
+    <!-- Floating Appointment Button -->
     <div class="floating-appointment">
         <button 
             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mbtubsandavoradoors/euro-doors-and-windows'});return false;"
@@ -57,11 +60,12 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-[100] sticky-header border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter brand-font">AVORATERRA</div>
+            <div class="text-2xl font-bold tracking-tighter brand-font">AVORATARA</div>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
                 <a href="#products" class="hover:text-amber-700 transition">Solutions</a>
+                <a href="#about" class="hover:text-amber-700 transition">Our Story</a>
                 <a href="#inspiration" class="hover:text-amber-700 transition">Inspiration</a>
                 <button 
                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mbtubsandavoradoors/euro-doors-and-windows'});return false;"
@@ -71,7 +75,7 @@
                 </button>
             </div>
 
-            <!-- Mobile Action Button (Shows only on mobile next to menu) -->
+            <!-- Mobile Action Button -->
             <div class="flex md:hidden items-center gap-4">
                 <button 
                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mbtubsandavoradoors/euro-doors-and-windows'});return false;"
@@ -88,7 +92,7 @@
     <section class="relative h-screen flex items-center justify-center text-center text-white hero-gradient">
         <div class="max-w-4xl px-6">
             <h1 class="text-5xl md:text-7xl mb-6 leading-tight">Elevating Spaces with European Precision</h1>
-            <p class="text-lg md:text-xl mb-10 font-light tracking-wide max-w-2xl mx-auto">Luxury minimalist kitchens, custom closets, and high-performance windows imported directly from Europe.</p>
+            <p class="text-lg md:text-xl mb-10 font-light tracking-wide max-w-2xl mx-auto">Luxury minimalist kitchens, custom closets, and high-performance windows born from the heart of European tradition.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="#products" class="bg-white text-slate-900 px-8 py-4 rounded-sm font-semibold uppercase tracking-widest hover:bg-amber-50 transition text-sm">Explore Collections</a>
                 <button 
@@ -101,12 +105,43 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="py-24 about-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-6xl mb-8 leading-tight">Avoratara: Where European Legacy Meets Your Vision</h2>
+                    <div class="space-y-6 text-slate-600 leading-relaxed text-lg font-light">
+                        <p>
+                            In a world of fleeting trends, <strong>Avoratara</strong> stands as a testament to enduring excellence. Born from the heart of Europe's most revered architectural traditions in Maribor, Slovenia, we don't just import products—we transport a philosophy.
+                        </p>
+                        <p>
+                            Imagine kitchens that blend minimalist luxury with a warmth that beckons, where intelligent design meets the whisper of ancient craftsmanship. Envision windows that not only frame your world but insulate it with an unrivaled embrace, exceeding standards by 40%—proof that true performance can be breathtakingly beautiful.
+                        </p>
+                        <p>
+                            Our metalwork, forged with generations of expertise, offers more than protection; it's a promise of finishes that defy time. Avoratara is for the discerning architect and the visionary homeowner who understand that true luxury isn't just seen; it's felt. 
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?auto=format&fit=crop&q=80&w=1200" alt="Maribor Architecture Inspiration" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 bg-slate-900 text-white p-10 max-w-xs hidden lg:block">
+                        <p class="text-sm uppercase tracking-[0.2em] mb-2 font-bold text-amber-500">The Roots</p>
+                        <p class="brand-font text-2xl italic">"Every line is drawn with purpose, every space crafted to elevate the human experience."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Product Categories -->
     <section id="products" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl mb-4">Architectural Solutions</h2>
-                <p class="text-slate-500 max-w-xl mx-auto">Masterpieces of engineering and design.</p>
+                <p class="text-slate-500 max-w-xl mx-auto">Uncompromising pursuit of European excellence, delivered to your doorstep.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -117,7 +152,7 @@
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl mb-2">Windows & Doors</h3>
-                        <p class="text-slate-500 text-sm mb-4">Triple-glazed systems with slim-profile aluminum and timber frames.</p>
+                        <p class="text-slate-500 text-sm mb-4">High-performance systems exceeding insulation standards by 40%.</p>
                         <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mbtubsandavoradoors/euro-doors-and-windows'});return false;" class="text-amber-800 font-semibold text-xs uppercase tracking-widest border-b border-amber-800 pb-1">Inquire Now</button>
                     </div>
                 </div>
@@ -129,7 +164,7 @@
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl mb-2">Roofing & Gutters</h3>
-                        <p class="text-slate-500 text-sm mb-4">European metal roofing panels, soffits, and seamless gutter systems.</p>
+                        <p class="text-slate-500 text-sm mb-4">Metalwork forged with generations of expertise for finishes that defy time.</p>
                         <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mbtubsandavoradoors/euro-doors-and-windows'});return false;" class="text-amber-800 font-semibold text-xs uppercase tracking-widest border-b border-amber-800 pb-1">Inquire Now</button>
                     </div>
                 </div>
@@ -141,7 +176,7 @@
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl mb-2">Luxury Kitchens</h3>
-                        <p class="text-slate-500 text-sm mb-4">Minimalist European kitchens with handle-less cabinetry and premium finishes.</p>
+                        <p class="text-slate-500 text-sm mb-4">Where minimalist luxury meets the whisper of ancient Slovenian craftsmanship.</p>
                         <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mbtubsandavoradoors/euro-doors-and-windows'});return false;" class="text-amber-800 font-semibold text-xs uppercase tracking-widest border-b border-amber-800 pb-1">Inquire Now</button>
                     </div>
                 </div>
@@ -149,24 +184,24 @@
         </div>
     </section>
 
-    <!-- Why Avoraterra -->
+    <!-- Why Section -->
     <section class="py-20 bg-slate-900 text-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-16">
             <div>
-                <h2 class="text-4xl md:text-5xl mb-8">The European Difference</h2>
+                <h2 class="text-4xl md:text-5xl mb-8 text-amber-500">The Avoratara Standard</h2>
                 <div class="space-y-8">
                     <div class="flex gap-4">
-                        <div class="text-amber-500 text-3xl">✓</div>
+                        <div class="text-amber-500 text-3xl font-light">01</div>
                         <div>
-                            <h4 class="text-xl font-semibold mb-1">Passive House Ready</h4>
-                            <p class="text-slate-400 text-sm">Window systems that offer unrivaled thermal performance.</p>
+                            <h4 class="text-xl font-semibold mb-1">Legacy of Artistry</h4>
+                            <p class="text-slate-400 text-sm">Deeply rooted in Maribor's revered architectural history.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="text-amber-500 text-3xl">✓</div>
+                        <div class="text-amber-500 text-3xl font-light">02</div>
                         <div>
-                            <h4 class="text-xl font-semibold mb-1">Tailored Organization</h4>
-                            <p class="text-slate-400 text-sm">Custom closets designed for your specific lifestyle and space.</p>
+                            <h4 class="text-xl font-semibold mb-1">Seamless Integration</h4>
+                            <p class="text-slate-400 text-sm">Every line drawn with purpose to elevate the human experience.</p>
                         </div>
                     </div>
                 </div>
@@ -174,7 +209,7 @@
                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mbtubsandavoradoors/euro-doors-and-windows'});return false;"
                     class="mt-10 bg-amber-700 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-amber-600 transition"
                 >
-                    Discuss Your Project
+                    Discuss Your Vision
                 </button>
             </div>
             <div class="relative">
@@ -187,7 +222,7 @@
     <section id="contact" class="py-24 bg-amber-50">
         <div class="max-w-3xl mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl mb-6">Begin Your Journey</h2>
-            <p class="text-slate-600 mb-12">Connect with our specialists to review your architectural plans.</p>
+            <p class="text-slate-600 mb-12">Transform your dreams into architectural masterpieces that stand for something.</p>
             
             <button 
                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mbtubsandavoradoors/euro-doors-and-windows'});return false;"
@@ -196,7 +231,6 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Set Appointment Now
             </button>
-            <p class="mt-6 text-slate-400 text-sm uppercase tracking-widest">Typical response time: < 24 hours</p>
         </div>
     </section>
 
@@ -204,14 +238,14 @@
     <footer class="bg-white border-t border-gray-100 py-16">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div class="col-span-2">
-                <div class="text-2xl font-bold tracking-tighter brand-font mb-6">AVORATERRA</div>
-                <p class="text-slate-500 text-sm max-w-xs leading-relaxed">Bringing the pinnacle of European architecture to your doorstep. Precision engineering meets luxury design.</p>
+                <div class="text-2xl font-bold tracking-tighter brand-font mb-6">AVORATARA</div>
+                <p class="text-slate-500 text-sm max-w-xs leading-relaxed">Where European legacy meets your vision. Precision engineering from Maribor, Slovenia, delivered to your doorstep.</p>
             </div>
             <div>
                 <h5 class="font-bold text-xs uppercase tracking-widest mb-6">Contact</h5>
                 <ul class="space-y-3 text-sm text-slate-600 font-medium">
-                    <li>hello@avoraterra.com</li>
-                    <li>+1 (800) 555-0123</li>
+                    <li>hello@avoratara.com</li>
+                    <li>Maribor, Slovenia | North America</li>
                 </ul>
             </div>
             <div class="flex flex-col justify-end">
@@ -222,6 +256,9 @@
                     Set Appointment
                 </button>
             </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-50 text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+            © 2024 Avoratara Architectural Solutions
         </div>
     </footer>
 
